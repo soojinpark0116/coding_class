@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+
+	body
+	{
+		background:#f5f5f5;
+	}
+
+		header, footer {
+			height: 60px;
+			background-color: white;
+			position: fixed;
+			left:0;
+			right:0;
+		}
+
+		header #quiz{
+			float: left;
+			padding: 5px;
+			line-height: 10px;
+		}
+
+		header{
+			top:0;
+		}
+
+		main{
+		}
+
+		footer{
+			bottom:0;
+		}
+
+		.endPractice {
+  			background-color: #white;
+  			border: 2px solid #5597E8;
+  			color: #5597E8;
+  			border-radius: 4px;
+  			font-size: 20px;
+  			padding: 20px 30px;
+  			line-height: 1px;
+  			float: right;
+  			margin-top : -13px;
+  			margin-right: 10px;
+  			display: inline-block;
+		}
+
+		.centerwhitebox{
+			width: 550px;
+			height: 200px;
+			margin: 80px auto;
+			background: #ffffff;
+			position: relative;
+			padding: 20px;
+			padding-left: 20px;
+			padding-right: 20px;
+			padding-bottom: 65px;
+		}
+
+		hr.main{
+			border: 0.5px solid #dddddd;
+			margin-bottom: 30px;
+			margin-top: -10px;
+		}
+
+		.container {
+  			display: block;
+ 			 position: relative;
+			 padding-left: 50px;
+			 margin-bottom: 5px;
+			 cursor: pointer;
+			 -webkit-user-select: none;
+			 -moz-user-select: none;
+			 -ms-user-select: none;
+			 user-select: none;
+		}
+
+		.container input {
+			position: absolute;
+			opacity: 0;
+			cursor: pointer;
+		}
+
+		.checkmark {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 15px;
+			width: 15px;
+			background-color: #eee;
+			border-radius: 50%;
+		}
+
+		.container:hover input ~ .checkmark {
+			background-color: #ccc;
+		}
+
+		.container input:checked ~ .checkmark {
+  			background-color: #2196F3;
+		}
+
+		.checkmark:after {
+			content: "";
+			position: absolute;
+			display: none;
+		}
+
+		.container input:checked ~ .checkmark:after {
+		  	display: block;
+		}
+
+		.container .checkmark:after {
+		 	top: 5px;
+			left: 5px;
+			width: 5px;
+			height: 5px;
+			border-radius: 50%;
+			background: white;
+		}
+
+		.dots {
+			height: 20px;
+			width: 20px;
+			border-radius: 30px;
+			float:left;
+   			margin: 18px 2px;
+   			opacity: 0.3;
+   			border-style: solid;
+			border-width: 1px;
+			border-color: #grey;
+   		}
+
+		.correctGreen{
+			background-color: green;
+		}
+
+		.correctRed{
+			background-color: red;
+		}
+
+		.viewReport{
+			text-decoration: underline;
+			color: blue;
+			margin-top : 25px;
+		}
+
+		.checkAnswer {
+  			background-color: #5597E8;
+  			color: #ffffff;
+  			border-radius: 4px;
+  			font-size: 20px;
+  			padding: 20px 30px;
+  			line-height: 1px;
+  			float: right;
+  			margin-top : 8px;
+  			margin-right: 10px;
+		}
+
+
+	</style>
+
+</head>
+<body>
+
+<header>
+
+	<h1><div id="quiz">Quiz</h1></div>
+	<button class="endPractice">End Practice</button>
+
+</header>
+
+
+<main>
+
+<div class="centerwhitebox">
+		<h2>Question 1 of 8</h2>
+		<hr class="main">
+		<p>What tag should I use if I want to add an external javascript file</p>
+		<ol type="A">
+		<label class="container"><li>script</li>
+			<input type="radio" checked="checked" name="radio">
+  			<span class="checkmark"></span>
+		</label>
+		<label class="container"><li>javascript</li>
+			<input type="radio" checked="checked" name="radio">
+  			<span class="checkmark"></span>
+		</label>
+		<label class="container"><li>include</li>
+			<input type="radio" checked="checked" name="radio">
+  			<span class="checkmark"></span>
+  		</label>
+		<label class="container"><li>style</li>
+			<input type="radio" checked="checked" name="radio">
+  			<span class="checkmark"></span>
+		</label>
+		</ol>
+
+	</div>
+</main>
+
+<footer>
+
+	<button class="checkAnswer">Check Answer</button>
+
+	<div class="dots correctGreen"></div>
+	<div class="dots correctRed"></div>
+	<div class="dots correctGreen"></div>
+	<div class="dots"></div>
+	<div class="dots"></div>
+	<div class="dots"></div>
+	<div class="dots"></div>
+	<div class="dots"></div>
+	<div class="viewReport"><a href="https://www.merriam-webster.com/dictionary/report">View report</a></div>
+
+</footer>
+
+</body>
+</html>
